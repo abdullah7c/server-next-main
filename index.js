@@ -10,6 +10,10 @@ app.use(cors())
 
 const port = 5000;
 
+app.get("/", (req,res)=>{
+    res.send("Welcome to Page")
+})
+
 app.get("/users", async(req,res)=>{
     try {
         const result = await Users.findOne()
